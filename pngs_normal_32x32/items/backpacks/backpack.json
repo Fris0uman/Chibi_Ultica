@@ -1,12 +1,17 @@
 [
 {
   "id": "backpack",
-  "fg": ["backpack"],
-  "bg": []
+  "fg": "backpack",
+  "bg": ""
+},
+{
+  "id": "duffelbag",
+  "fg": "duffelbag",
+  "bg": ""
 },
 {
   "id": "molle_pack",
-  "fg": ["molle_pack"],
-  "bg": []
+  "fg": "molle_pack",
+  "bg": ""
 }
 ]
