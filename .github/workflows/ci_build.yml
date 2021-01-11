@@ -3,7 +3,7 @@
 #
 # This action is triggerd by any PR against the master branch as well
 # as on any push to the master branch itself
-# that changes any file in Chibi_Ultica/ folder
+# that changes any file in gfx/Chibi_Ultica/ folder
 name: Chibi Ultica composer
 
 on:
@@ -11,13 +11,13 @@ on:
     branches:
       - master
     paths:
-      - 'Chibi_Ultica/**'
+      - 'gfx/Chibi_Ultica/**'
       - '.github/workflows/ci_build.yml'
   pull_request:
     branches:
       - master
     paths:
-      - 'Chibi_Ultica/**'
+      - 'gfx/Chibi_Ultica/**'
       - '.github/workflows/ci_build.yml'
 
 jobs:
@@ -42,11 +42,11 @@ jobs:
           || echo "Error: Failed to get compose.py"
 
           cd ..
-          python3 build/compose.py --use-all Chibi_Ultica
+          python3 build/compose.py --use-all gfx/Chibi_Ultica
           cd build
 
           artifact_name=Chibi_Ultica-$(echo $GITHUB_SHA | cut -c -8)
-          tileset_dir= Chibi_Ultica
+          tileset_dir= gfx/Chibi_Ultica
 
           mkdir $artifact_name
           mv $tileset_dir/*.png            $artifact_name
