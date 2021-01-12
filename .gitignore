@@ -1,5 +1,4 @@
 .DS_Store
 # generated on build
 gfx/*/tile_config.json
-
-*.png
+gfx/*.png
